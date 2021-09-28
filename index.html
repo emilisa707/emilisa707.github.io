@@ -6,6 +6,14 @@
     <title>Unity WebGL Player | Leadership-V.2</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+      <style>
+          @media only screen and (orientation:potrait){
+              body{
+                  height: 100vw;
+                  transform:rotate(90deg);
+              }
+          }
+      </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -26,14 +34,6 @@
       </div>
     </div>
     <script>
-        let de = document.documentElement;
-        if (de.requestFullscreen) { de.requestFullscreen(); }
-        else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
-        else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
-        else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
-
-        screen.orientation.lock('landscape');
-
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/emilisa707.github.io.loader.js";
       var config = {
