@@ -26,6 +26,14 @@
       </div>
     </div>
     <script>
+        let de = document.documentElement;
+        if (de.requestFullscreen) { de.requestFullscreen(); }
+        else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
+        else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
+        else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
+
+        screen.orientation.lock('potrait');
+
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/emilisa707.github.io.loader.js";
       var config = {
