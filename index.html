@@ -1,92 +1,123 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Leadership-V.2</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body class="dark">
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emilisa | Game Programmer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center py-6 px-10 bg-gray-900 shadow-md fixed w-full z-10">
+    <h1 class="text-xl font-bold text-purple-400">Emilisa</h1>
+    <div class="space-x-6">
+      <a href="#about" class="hover:text-purple-400">About</a>
+      <a href="#skills" class="hover:text-purple-400">Skills</a>
+      <a href="#projects" class="hover:text-purple-400">Projects</a>
+      <a href="#contact" class="hover:text-purple-400">Contact</a>
     </div>
-    <div id="loading-cover" style="display:none;">
-      <div id="unity-loading-bar">
-        <div id="unity-logo"><img src="logo.png"></div>
-        <div id="unity-progress-bar-empty" style="display: none;">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-        <div class="spinner"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-purple-400">Hi, I’m Emilisa 👋</h2>
+    <p class="text-lg md:text-xl max-w-2xl text-gray-300">
+      Game Programmer specializing in <span class="text-purple-300">Gameplay Systems</span> and <span class="text-purple-300">Architecture</span>.  
+      Passionate about crafting interactive experiences using Unity, Unreal, and Evergine.
+    </p>
+    <div class="mt-8 space-x-4">
+      <a href="#projects" class="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600 transition">View Projects</a>
+      <a href="#contact" class="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-10 bg-gray-900">
+    <h3 class="text-3xl font-semibold text-purple-400 mb-6 text-center">About Me</h3>
+    <div class="max-w-3xl mx-auto text-center text-gray-300 leading-relaxed">
+      <p>I’m a Game Programmer with a Master’s degree in Digital Media Technology and Game, and have been working professionally since 2021.</p>
+      <p class="mt-4">I focus on building scalable systems and gameplay frameworks — from inventory and crafting systems to clean architecture migrations.</p>
+      <p class="mt-4 italic text-purple-300">"I believe good game architecture is invisible — it just works beautifully."</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-10">
+    <h3 class="text-3xl font-semibold text-purple-400 mb-10 text-center">Skills</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto text-gray-200">
+      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-3 text-purple-300">Game Engines</h4>
+        <p>Unity, Unreal Engine, Evergine</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-3 text-purple-300">Programming</h4>
+        <p>C#, C++, Gameplay Systems, Clean Architecture</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-3 text-purple-300">Tools</h4>
+        <p>Git, Visual Studio, Rider, Perforce</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-3 text-purple-300">Specialties</h4>
+        <p>Inventory System, Crafting, Quest System, Save/Load</p>
       </div>
     </div>
-    <div id="unity-fullscreen-button" style="display: none;"></div>
-    <script>
-      const hideFullScreenButton = "";
-      const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/emilisa707.github.io.loader.js";
-      const config = {
-        dataUrl: buildUrl + "/emilisa707.github.io.data",
-        frameworkUrl: buildUrl + "/emilisa707.github.io.framework.js",
-        codeUrl: buildUrl + "/emilisa707.github.io.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Leadership-V.2",
-        productVersion: "1.0",
-      };
+  </section>
 
-      const container = document.querySelector("#unity-container");
-      const canvas = document.querySelector("#unity-canvas");
-      const loadingCover = document.querySelector("#loading-cover");
-      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-      const progressBarFull = document.querySelector("#unity-progress-bar-full");
-      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      const spinner = document.querySelector('.spinner');
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-10 bg-gray-900">
+    <h3 class="text-3xl font-semibold text-purple-400 mb-10 text-center">Projects</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      
+      <!-- Project 1 -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h4 class="text-2xl font-bold text-purple-300 mb-2">Wonder Wandelier</h4>
+        <p class="text-gray-300 mb-4">
+          A cozy magic wand-shop simulation RPG.  
+          Manage materials, craft wands, and build your shop reputation.
+        </p>
+        <p class="text-sm text-gray-400 mb-4">🛠 Built with Evergine | Custom Inventory & Crafting System</p>
+        <div class="space-x-3">
+          <a href="#" class="text-purple-400 hover:underline">Play on Itch.io</a>
+          <a href="#" class="text-purple-400 hover:underline">View Code</a>
+        </div>
+      </div>
 
-      const canFullscreen = (function() {
-        for (const key of [
-            'exitFullscreen',
-            'webkitExitFullscreen',
-            'webkitCancelFullScreen',
-            'mozCancelFullScreen',
-            'msExitFullscreen',
-          ]) {
-          if (key in document) {
-            return true;
-          }
-        }
-        return false;
-      }());
+      <!-- Project 2 -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h4 class="text-2xl font-bold text-purple-300 mb-2">Death and Faeology</h4>
+        <p class="text-gray-300 mb-4">
+          Mystery visual novel with item-based progression and magnifying glass investigation system.
+        </p>
+        <p class="text-sm text-gray-400 mb-4">🛠 Built with Unity | Object Examination System</p>
+        <div class="space-x-3">
+          <a href="#" class="text-purple-400 hover:underline">Demo Video</a>
+          <a href="#" class="text-purple-400 hover:underline">GitHub Repo</a>
+        </div>
+      </div>
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-      }
-      loadingCover.style.display = "";
+    </div>
+  </section>
 
-      const script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          spinner.style.display = "none";
-          progressBarEmpty.style.display = "";
-          progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-          loadingCover.style.display = "none";
-          if (canFullscreen) {
-            if (!hideFullScreenButton) {
-              fullscreenButton.style.display = "";
-            }
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-          }
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-10 text-center">
+    <h3 class="text-3xl font-semibold text-purple-400 mb-6">Contact</h3>
+    <p class="text-gray-300 mb-6">Interested in collaborating or hiring me?</p>
+    <a href="mailto:emilisa.email@example.com" class="bg-purple-500 px-6 py-3 rounded-lg text-white hover:bg-purple-600 transition">
+      Email Me
+    </a>
+    <div class="mt-8 space-x-6">
+      <a href="#" class="text-purple-400 hover:underline">LinkedIn</a>
+      <a href="#" class="text-purple-400 hover:underline">GitHub</a>
+      <a href="#" class="text-purple-400 hover:underline">Itch.io</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm bg-gray-900">
+    © 2025 Emilisa. All rights reserved.
+  </footer>
+
+</body>
 </html>
