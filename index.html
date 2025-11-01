@@ -1,214 +1,363 @@
 <!DOCTYPE html>
-<html lang="en" class="transition-colors duration-300">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emilisa | Game Programmer</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script>
-    // Load mode preference before page renders
-    if (localStorage.theme === 'light') {
-      document.documentElement.classList.add('light');
-    } else {
-      document.documentElement.classList.remove('light');
-    }
-  </script>
-  <style>
-    /* Light mode overrides */
-    .light body {
-      background-color: #f9fafb;
-      color: #1f2937;
-    }
-    .light .bg-gray-900, .light .bg-gray-950, .light .bg-gray-800 {
-      background-color: #f0f0f5;
-    }
-    .light .text-gray-100, .light .text-gray-200, .light .text-gray-300 {
-      color: #1f1f1f;
-    }
-    .light .text-purple-400, .light .text-purple-300 {
-      color: #6b21a8;
-    }
-    .light .bg-purple-500 {
-      background-color: #8b5cf6;
-    }
-    .light a:hover {
-      color: #7e22ce;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Portofolio Tailwind CSS</title>
 </head>
+<body>
+    <!-- Header Section Start -->
+     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-primary block py-6">E M I L I S A</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
 
-<body class="bg-gray-950 text-gray-100 font-sans transition-colors duration-500">
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About Me</a>
+                            </li>
+                            <li class="group">
+                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portofolio</a>
+                            </li>
+                            <li class="group">
+                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Blog</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+     </header>
+    <!-- Header Section End -->
 
-  <!-- Navbar -->
-  <nav class="flex justify-between items-center py-6 px-10 bg-gray-900 shadow-md fixed w-full z-10">
-    <h1 class="text-xl font-bold text-purple-400">Emilisa</h1>
-    <div class="flex items-center space-x-6">
-      <a href="#about" class="hover:text-purple-400">About</a>
-      <a href="#skills" class="hover:text-purple-400">Skills</a>
-      <a href="#projects" class="hover:text-purple-400">Projects</a>
-      <a href="#contact" class="hover:text-purple-400">Contact</a>
+    <!-- Hero Section Start -->
+     <section id="home" class="pt-36">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-between w-full">
+                <!-- Left -->
+                <div class="w-full lg:w-1/2 self-center">
+                    <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl"> Hello Everyone👋, I am <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">EMILISA</span></h1>
+                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl"> Game Programmer, <span class="text-dark">Unreal & Unity</span> Engine Specialist</h2>
+                    <p class="font-medium text-secondary mb-10 leading-relaxed"> 
+                        Game Programmer specializing in <span class="text-dark"> Gameplay Systems, AI and Architecture </span>. Passionate about crafting interactive experiences using Unity, Unreal, and Evergine. </p>
 
-      <!-- Toggle Switch -->
-      <label class="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" id="theme-toggle" class="sr-only peer">
-        <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:bg-purple-500 transition-colors duration-300"></div>
-        <span class="absolute left-1 top-[2px] w-5 h-5 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5"></span>
-      </label>
-    </div>
-  </nav>
+                    <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Contact Me</a>
+                </div>
+                <!-- Right -->
+                <div class="w-full lg:w-1/2 self-end lg:flex lg:justify-end">
+                    <div class="relative mt-10 lg:mt-9">
+                        <img src="/dist/img/emilisa.png" alt="Emilisa" width="400" height="400" class="max-w-full mx-auto"/>
+                        <span class="absolute bottom-0 -z-20 left-1/2 -translate-x-1/2 md:scale-125">
+                            <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#14b8a6" d="M53.5,-19.8C59.4,0.7,47.3,24.6,27.8,38.9C8.4,53.2,-18.5,57.8,-39.8,44.8C-61,31.7,-76.6,0.9,-69.1,-22C-61.5,-44.9,-30.7,-59.8,-3.5,-58.7C23.8,-57.5,47.6,-40.4,53.5,-19.8Z" transform="translate(100 100) scale(1.2)" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Hero Section End -->
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-purple-400">Hi, I’m Emilisa 👋</h2>
-    <p class="text-lg md:text-xl max-w-2xl text-gray-300">
-      Game Programmer specializing in <span class="text-purple-300">Gameplay Systems</span> and <span class="text-purple-300">Architecture</span>.  
-      Passionate about crafting interactive experiences using Unity, Unreal, and Evergine.
-    </p>
-    <div class="mt-8 space-x-4">
-      <a href="#projects" class="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600 transition">View Projects</a>
-      <a href="#contact" class="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition">Contact Me</a>
-    </div>
-  </section>
+    <!-- About Section Start -->
+     <section id="about" class="pt-36 pb-32">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap lg:flex-nowrap items-start justify-between w-full gap-8">
+                <!-- Left -->
+                <div class="w-full lg:w-1/2 self-center mb-10">
+                    <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md">"I believe good game architecture is invisible — it just works beautifully."</h2>
+                    <p class="font-medium text-base text-secondary max-w-xl">
+                        Dedicated and passionate Game Programmer with a Master’s degree in Digital Media and Game Technology from Institut Teknologi Bandung. Over 4 years of professional experience developing gameplay, AI, quests, and system architecture in Unity and Unreal Engine. Skilled in creating structured, scalable codebases and mentoring junior developers.</p>
+                </div>
+                <!-- Right -->
+                 <div class="w-full lg:px-4 lg:w-1/2 justify-between relative">
+                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Let’s stay connected!</h3>
+                    <p class="font-medium text-base text-secondary mb-6">
+                        You can find me on these platforms, where I share updates about my projects, game development insights, and behind-the-scenes moments from my creative journey. Feel free to reach out or just say hi — I’m always open to chatting about games, programming, or new ideas!</p>
+                    <div class="flex items-center">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/emilisa707/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                        </a>
 
-  <!-- Other sections... (About, Skills, Projects, Contact, Footer) -->
-     <!-- About Section -->
-  <section id="about" class="py-20 px-10 bg-gray-900">
-    <h3 class="text-3xl font-semibold text-purple-400 mb-6 text-center">About Me</h3>
-    <div class="max-w-3xl mx-auto text-center text-gray-300 leading-relaxed">
-      <p>I’m a Game Programmer with a Master’s degree in Digital Media Technology and Game, and have been working professionally since 2021.</p>
-      <p class="mt-4">I focus on building scalable systems and gameplay frameworks — from inventory and crafting systems to clean architecture migrations.</p>
-      <p class="mt-4 italic text-purple-300">"I believe good game architecture is invisible — it just works beautifully."</p>
-    </div>
-  </section>
+                        <!-- Itch IO -->
+                        <a href="https://emilisa707.itch.io/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Itch.io</title><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"/></svg>
+                        </a>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 px-10">
-    <h3 class="text-3xl font-semibold text-purple-400 mb-10 text-center">Skills</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto text-gray-200">
-      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
-        <h4 class="text-xl font-bold mb-3 text-purple-300">Game Engines</h4>
-        <p>Unity, Unreal Engine</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
-        <h4 class="text-xl font-bold mb-3 text-purple-300">Programming</h4>
-        <p>C#, C++, Java Script, Python</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
-        <h4 class="text-xl font-bold mb-3 text-purple-300">Tools</h4>
-        <p>Git, Visual Studio, Rider, Perforce</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-md">
-        <h4 class="text-xl font-bold mb-3 text-purple-300">Specialties</h4>
-        <p>Inventory System, Crafting, Quest System, Save/Load, AI</p>
-      </div>
-    </div>
-  </section>
+                        <!-- Linkedin -->
+                        <a href="https://www.linkedin.com/in/emilisa707/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zM5.379 4.768h1.74c.147 0 .288.004.424.01a.376.376 0 01.303.152.684.684 0 01.11.364c.007.149.01.31.01.484v12.093c0 .176.004.37.01.587.006.216-.024.377-.091.485-.054.094-.174.17-.363.222a.754.754 0 01-.304.02 2.533 2.533 0 00-.323-.02H5.702c-.149 0-.286-.006-.415-.02a.572.572 0 01-.314-.12.48.48 0 01-.12-.304 4.164 4.164 0 01-.02-.424V6.203c0-.188-.004-.41-.01-.667-.007-.255.024-.437.09-.545a.595.595 0 01.264-.202c.04 0 .078-.004.11-.01a.536.536 0 01.092-.011zm10.527 3.687c.201-.008.386-.001.548.019.565.032 1.053.144 1.464.338.539.257.963.634 1.273 1.133.095.148.168.307.222.475.055.169.11.34.164.515.026.108.042.21.05.304.005.094.023.19.05.284 0 .08.007.134.02.16.027.19.04.385.04.587v5.661c0 .257-.004.503-.01.738-.008.237-.105.39-.294.456a.91.91 0 01-.283.04h-1.415c-.163 0-.307-.01-.435-.03a.418.418 0 01-.293-.173.613.613 0 01-.09-.313 8.825 8.825 0 01-.01-.416v-4.426c0-.5-.02-.961-.06-1.386-.042-.424-.163-.785-.365-1.082a1.427 1.427 0 00-.668-.51c-.186-.095-.488-.156-.827-.156-.397 0-.74.083-.912.207-.139.057-.26.124-.362.197-.433.31-.688.762-.77 1.354-.08.594-.123 1.261-.123 2.002v4.125c0 .121-.02.223-.06.304a.42.42 0 01-.323.262c-.149.027-.33.04-.545.04H10.88c-.15 0-.297-.006-.446-.02-.148-.013-.256-.06-.323-.142-.095-.12-.139-.294-.131-.525.006-.23.009-.446.009-.647V9.6c0-.147.004-.282.01-.403a.507.507 0 01.112-.305.24.24 0 01.132-.09c.06-.02.124-.037.191-.05h.102c.068-.014.138-.022.212-.022h1.06c.109 0 .214.005.316.012.1.006.19.023.271.05.095.04.16.1.193.181.03.072.03.147.054.24.056.23.118.486.291.508.08.01.159-.025.224-.09.031-.022.114-.11.14-.144.095-.114.28-.278.388-.346.078-.058.142-.1.202-.136.192-.134.483-.261.832-.36.014-.006.028-.012.042-.016.112-.036.225-.062.342-.077l.159-.029c.224-.038.442-.06.643-.068Z"/></svg>
+                        </a>
 
-  <!-- Projects Section -->
-<section id="projects" class="py-20 px-10 bg-gray-900">
-  <h3 class="text-3xl font-semibold text-purple-400 mb-10 text-center">Projects</h3>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-    
-    <!-- Project 1 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-      <h4 class="text-2xl font-bold text-purple-300 mb-2">Wonder Wandelier</h4>
-      <p class="text-gray-300 mb-4">
-        A cozy magic wand-shop simulation RPG.  
-        Manage materials, craft wands, and build your shop reputation.
-      </p>
-      <p class="text-sm text-gray-400 mb-4">🛠 Built with Unity | Custom Inventory & Crafting System</p>
-      <div class="space-x-3">
-        <a href="https://www.youtube.com/watch?v=PAPyTGplzpc" class="text-purple-400 hover:underline">Video Gameplay</a>
-        <!-- <a href="#" class="text-purple-400 hover:underline">View Code</a> -->
-      </div>
-    </div>
+                        <!-- GitHub -->
+                        <a href="https://github.com/emilisa707" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
 
-    <!-- Project 2 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-      <h4 class="text-2xl font-bold text-purple-300 mb-2">Death and Faeology</h4>
-      <p class="text-gray-300 mb-4">
-        Mystery visual novel with item-based progression and magnifying glass investigation system.
-      </p>
-      <p class="text-sm text-gray-400 mb-4">🛠 Built with Unity | Object Examination & Progression System</p>
-      <div class="space-x-3">
-        <a href="https://store.steampowered.com/app/3369020/Death__Faeology/" class="text-purple-400 hover:underline">Play Demo</a>
-        <!--<a href="#" class="text-purple-400 hover:underline">GitHub Repo</a> -->
-      </div>
-    </div>
+                        <!-- Youtube -->
+                        <a href="" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                        </a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </section>
+    <!-- About Section End -->
 
-    <!-- Project 3 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-      <h4 class="text-2xl font-bold text-purple-300 mb-2">Ookami Okami</h4>
-      <p class="text-gray-300 mb-4">
-        A 2D action-adventure game about a wolf spirit restoring balance to a cursed forest.  
-        Features melee combat, ability upgrades, and atmospheric storytelling.
-      </p>
-      <p class="text-sm text-gray-400 mb-4">🛠 Built with Unity | Dialogue System & Point and Click</p>
-      <div class="space-x-3">
-        <a href="https://store.steampowered.com/app/3703750/Ookami_Okami/" class="text-purple-400 hover:underline">Play Demo</a>
-        <!-- <a href="#" class="text-purple-400 hover:underline">GitHub Repo</a> -->
-      </div>
-    </div>
+    <!-- Portofolio Section Start -->
+     <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+        <div class="container mx-auto">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Portolio</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4">Selected Project</h2>
+                    <p class="font-medium text-md text-secondary">
+                        Here are some of the projects I’ve developed throughout my journey as a Game Programmer. Each project reflects my passion for crafting immersive gameplay systems, structured architecture, and engaging player experiences. I specialize in building games using Unreal Engine and Unity, focusing on gameplay programming, AI systems, quests, and tool development to empower designers and artists.
+                    </p>
+                </div>
+            </div>
 
-    <!-- Project 4 -->
-    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-      <h4 class="text-2xl font-bold text-purple-300 mb-2">Bank King Simulator</h4>
-      <p class="text-gray-300 mb-4">
-        A humorous management simulator where players run a chaotic fantasy bank.  
-        Handle customers, manage gold, and survive magical audits!
-      </p>
-      <p class="text-sm text-gray-400 mb-4">🛠 Built with Unreal Engine | AI & Quest System</p>
-      <div class="space-x-3">
-        <a href="https://store.steampowered.com/app/3944410/Bank_King_Simulator/" class="text-purple-400 hover:underline">Steam Page</a>
-        <a href="https://www.youtube.com/watch?v=x2tlFFCEYtE" class="text-purple-400 hover:underline">Gameplay Trailer</a>
-      </div>
-    </div>
+            <!-- Bank King Simulator -->
+            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3944410/d678ed00745fc060841df4797f5a38c0fc397cac/ss_d678ed00745fc060841df4797f5a38c0fc397cac.1920x1080.jpg?t=1759728023" alt="Bank King Simulator" width="w-full"/>
+                    </div>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Bank King Simulator</h3>
+                    <p class="font-medium text-base text-secondary">
+                        A humorous management simulator where players run a chaotic fantasy bank. Handle customers, manage gold, and survive magical audits!
+                    </p>
+                    <p class="text-sm text-gray-400 mb-4">🛠 Built with Unreal Engine | AI & Quest System</p>
+                    <div class="space-x-3">
+                        <a href="https://store.steampowered.com/app/3944410/Bank_King_Simulator/" target="_blank" class="text-purple-400 hover:underline">Steam Page</a>
+                        <a href="https://www.youtube.com/watch?v=x2tlFFCEYtE" target="_blank" class="text-purple-400 hover:underline">Gameplay Trailer</a>
+                    </div>
+                </div>
 
-  </div>
-</section>
+                <!-- Ookami Okami -->
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3703750/e8765a00ec75d919cf82ecaf289d80cecc4a2d31/ss_e8765a00ec75d919cf82ecaf289d80cecc4a2d31.1920x1080.jpg?t=1759222405" alt="Ookami Okami" width="w-full"/>
+                    </div>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Ookami Okami</h3>
+                    <p class="font-medium text-base text-secondary">
+                        A 2D action-adventure game about a wolf spirit restoring balance to a cursed forest. Features melee combat, ability upgrades, and atmospheric storytelling.
+                    </p>
+                    <p class="text-sm text-gray-400 mb-4">🛠 Built with Unity | Dialogue System & Point and Click</p>
+                    <div class="space-x-3">
+                        <a href="https://store.steampowered.com/app/3703750/Ookami_Okami/" target="_blank" class="text-purple-400 hover:underline">Play Demo</a>
+                        <!-- <a href="#" class="text-purple-400 hover:underline">GitHub Repo</a> -->
+                    </div>
+                </div>
 
+                <!-- Death & Faeology -->
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3369020/5c3d96ffe53d746d44317b49850db434172668c6/ss_5c3d96ffe53d746d44317b49850db434172668c6.1920x1080.jpg?t=1753390550" alt="Death & Faeology" width="w-full"/>
+                    </div>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Death & Faeology</h3>
+                    <p class="font-medium text-base text-secondary">
+                        Mystery visual novel with item-based progression and magnifying glass investigation system.
+                    </p>
+                    <p class="text-sm text-gray-400 mb-4">🛠 Built with Unity | Object Examination & Progression System</p>
+                    <div class="space-x-3">
+                        <a href="https://store.steampowered.com/app/3369020/Death__Faeology/" target="_blank" class="text-purple-400 hover:underline">Play Demo</a>
+                        <!--<a href="#" class="text-purple-400 hover:underline">GitHub Repo</a> -->
+                    </div>
+                </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-10 text-center">
-    <h3 class="text-3xl font-semibold text-purple-400 mb-6">Contact</h3>
-    <p class="text-gray-300 mb-6">Interested in collaborating or hiring me?</p>
-    <a href="mailto:emilisa90@gmail.com" class="bg-purple-500 px-6 py-3 rounded-lg text-white hover:bg-purple-600 transition">
-      Email Me
-    </a>
-    <div class="mt-8 space-x-6">
-      <a href="https://www.linkedin.com/in/emilisa707/" class="text-purple-400 hover:underline">LinkedIn</a>
-      <a href="https://github.com/emilisa707" class="text-purple-400 hover:underline">GitHub</a>
-      <a href="https://emilisa707.itch.io/" class="text-purple-400 hover:underline">Itch.io</a>
-    </div>
-  </section>
+                <!-- Wonder Wandelier -->
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376570/ss_feae757e7d6e152e8607e70df0b06dcaaaa8c7f3.1920x1080.jpg?t=1737085541" alt="Wonder Wandelier" width="w-full"/>
+                    </div>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Wonder Wandelier</h3>
+                    <p class="font-medium text-base text-secondary">
+                        A cozy magic wand-shop simulation RPG. Manage materials, craft wands, and build your shop reputation.
+                    </p>
+                    <p class="text-sm text-gray-400 mb-4">🛠 Built with Unity | Custom Inventory & Crafting System</p>
+                    <div class="space-x-3">
+                        <a href="https://www.youtube.com/watch?v=PAPyTGplzpc" target="_blank" class="text-purple-400 hover:underline">Video Gameplay</a>
+                        <!-- <a href="#" class="text-purple-400 hover:underline">View Code</a> -->
+                    </div>
+                </div>
 
-  <!-- ⬆️ Gunakan versi proyek yang sudah kamu update sebelumnya dengan 4 project -->
+            </div>
+        </div>
+     </section>
+    <!-- Portofolio Section End -->
 
-  <!-- Footer -->
-  <footer class="py-6 text-center text-gray-500 text-sm bg-gray-900">
-    © 2025 Emilisa. All rights reserved.
-  </footer>
+    <!-- Blog Section Start -->
+     <section id="blog" class="pt-36 pb-32 bg-slate-100">
+        <div class="container mx-auto">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4">Latest Blog</h2>
+                    <p class="font-medium text-md text-secondary">
+                        My blog section is on the way! I’ll soon be sharing articles about game development, programming tips, and behind-the-scenes stories from my projects. Stay tuned — updates are coming soon!
+                    </p>
+                </div>
+            </div>
 
-  <script>
-    // Theme toggle logic
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                        <img src="/dist/img/emilisa.png" alt="blog1" class="w-full"/>
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Judul satu</a></h3>
+                            <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque tempora fuga ea atque animi reiciendis est, ipsa eius, porro voluptas, ullam at laborum veritatis ex quo suscipit deleniti dolor iure.</p>
+                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                        <img src="/dist/img/emilisa.png" alt="blog1" class="w-full"/>
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Judul dua</a></h3>
+                            <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque tempora fuga ea atque animi reiciendis est, ipsa eius, porro voluptas, ullam at laborum veritatis ex quo suscipit deleniti dolor iure.</p>
+                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                        <img src="/dist/img/emilisa.png" alt="blog1" class="w-full"/>
+                        <div class="py-8 px-6">
+                            <h3>
+                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Judul tiga</a></h3>
+                            <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque tempora fuga ea atque animi reiciendis est, ipsa eius, porro voluptas, ullam at laborum veritatis ex quo suscipit deleniti dolor iure.</p>
+                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Blog Section End -->
 
-    // Set toggle based on saved theme
-    if (localStorage.theme === 'light') {
-      toggle.checked = true;
-      html.classList.add('light');
-    }
+    <!-- Contact Section Start -->
+     <section id="contact" class="pt-36 pb-32">
+        <div class="container mx-auto">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4">Interested in collaborating or hiring me?</h2>
+                    <p class="font-medium text-md text-secondary">
+                        I’m always open to new opportunities, collaborations, or freelance projects related to game development. Whether you’re looking for a gameplay programmer, system architect, or Unreal/Unity specialist — feel free to reach out! Let’s build something amazing together.
+                    </p>
+                </div>
+            </div>
+            
+            <form>
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <div class="w-full px-4 mb-8">
+                        <label for="name" class="text-base font-bold text-primary">Nama</label>
+                        <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base font-bold text-primary">Email</label>
+                        <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="message" class="text-base font-bold text-primary">Message</label>
+                        <textarea type="textarea" id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+                        </textarea>
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+     </section>
+    <!-- Contact Section End -->
 
-    toggle.addEventListener('change', () => {
-      if (toggle.checked) {
-        html.classList.add('light');
-        localStorage.theme = 'light';
-      } else {
-        html.classList.remove('light');
-        localStorage.theme = 'dark';
-      }
-    });
-  </script>
+    <!-- Footer Section Start -->
+     <footer class="bg-dark pt-24 pb-12">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                    <h2 class="font-bold text-4xl text-white mb-5">EMILISA</h2>
+                    <h3 class="font-bold text-2xl mb-2">Contact Me</h3>
+                    <p>emilisa90@gmail.com</p>
+                    <p>Bekasi</p>
+                </div>
+
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5"> Link </h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="inline-block text-base hover:text-primary mb-3">About Me</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full pt-10 border-t border-slate-700">
+                <div class="flex items-center justify-center mb-5">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/emilisa707/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                        </a>
+
+                        <!-- Itch IO -->
+                        <a href="https://emilisa707.itch.io/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Itch.io</title><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"/></svg>
+                        </a>
+
+                        <!-- Linkedin -->
+                        <a href="https://www.linkedin.com/in/emilisa707/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zM5.379 4.768h1.74c.147 0 .288.004.424.01a.376.376 0 01.303.152.684.684 0 01.11.364c.007.149.01.31.01.484v12.093c0 .176.004.37.01.587.006.216-.024.377-.091.485-.054.094-.174.17-.363.222a.754.754 0 01-.304.02 2.533 2.533 0 00-.323-.02H5.702c-.149 0-.286-.006-.415-.02a.572.572 0 01-.314-.12.48.48 0 01-.12-.304 4.164 4.164 0 01-.02-.424V6.203c0-.188-.004-.41-.01-.667-.007-.255.024-.437.09-.545a.595.595 0 01.264-.202c.04 0 .078-.004.11-.01a.536.536 0 01.092-.011zm10.527 3.687c.201-.008.386-.001.548.019.565.032 1.053.144 1.464.338.539.257.963.634 1.273 1.133.095.148.168.307.222.475.055.169.11.34.164.515.026.108.042.21.05.304.005.094.023.19.05.284 0 .08.007.134.02.16.027.19.04.385.04.587v5.661c0 .257-.004.503-.01.738-.008.237-.105.39-.294.456a.91.91 0 01-.283.04h-1.415c-.163 0-.307-.01-.435-.03a.418.418 0 01-.293-.173.613.613 0 01-.09-.313 8.825 8.825 0 01-.01-.416v-4.426c0-.5-.02-.961-.06-1.386-.042-.424-.163-.785-.365-1.082a1.427 1.427 0 00-.668-.51c-.186-.095-.488-.156-.827-.156-.397 0-.74.083-.912.207-.139.057-.26.124-.362.197-.433.31-.688.762-.77 1.354-.08.594-.123 1.261-.123 2.002v4.125c0 .121-.02.223-.06.304a.42.42 0 01-.323.262c-.149.027-.33.04-.545.04H10.88c-.15 0-.297-.006-.446-.02-.148-.013-.256-.06-.323-.142-.095-.12-.139-.294-.131-.525.006-.23.009-.446.009-.647V9.6c0-.147.004-.282.01-.403a.507.507 0 01.112-.305.24.24 0 01.132-.09c.06-.02.124-.037.191-.05h.102c.068-.014.138-.022.212-.022h1.06c.109 0 .214.005.316.012.1.006.19.023.271.05.095.04.16.1.193.181.03.072.03.147.054.24.056.23.118.486.291.508.08.01.159-.025.224-.09.031-.022.114-.11.14-.144.095-.114.28-.278.388-.346.078-.058.142-.1.202-.136.192-.134.483-.261.832-.36.014-.006.028-.012.042-.016.112-.036.225-.062.342-.077l.159-.029c.224-.038.442-.06.643-.068Z"/></svg>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/emilisa707" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
+
+                        <!-- Youtube -->
+                        <a href="" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                        </a>
+                </div>
+                <p class="font-medium text-sm text-slate-500 text-center">Made by <a href="https://www.linkedin.com/in/emilisa707/" target="_blank" class="font-bold, text-primary">Emilisa </a>, Created using <a href="https://tailwindcss.com/" target="_blank" class="font-bold, text-sky-500">Tailwind CSS 4 </a></p>
+            </div>
+        </div>
+     </footer>
+    <!-- Footer Section End -->
+<script src="/dist/js/script.js"></script>
 </body>
 </html>
