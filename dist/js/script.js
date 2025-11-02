@@ -20,3 +20,29 @@ window.onscroll = function() {
         header.classList.remove('navbar-fixed');
     }
 }
+
+//Darkmode toggle
+const darkToggle = document.querySelector('#dark-toggle');
+const html = document.querySelector('html');
+
+darkToggle.addEventListener('click', function() {
+    if(darkToggle.checked)
+    {
+        html.classList.add('dark');
+        localStorage.theme = "dark";
+    }
+    else
+    {
+        localStorage.theme = "light"
+        html.classList.remove('dark');
+    }
+});
+
+//move toggle position 
+if(localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches))
+    {
+        darkToggle.checked = true
+    } else {
+        darkToggle.checked = false
+    }

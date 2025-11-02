@@ -11,6 +11,15 @@
             scroll-behavior: smooth;
         }
     </style>
+    <script>
+        if(localStorage.theme === "dark" ||
+    (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches))
+    {
+        document.documentElement.classList.add("dark");
+    } else {
+        document.documentElement.classList.remove("dark");
+    }
+    </script>
 </head>
 <body>
     <!-- Header Section Start -->
@@ -27,22 +36,35 @@
                         <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                     </button>
 
-                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 dark:lg:bg-transparent">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Home</a>
                             </li>
                             <li class="group">
-                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About Me</a>
+                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">About Me</a>
                             </li>
                             <li class="group">
-                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portofolio</a>
+                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portofolio</a>
                             </li>
                             <li class="group">
-                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Blog</a>
+                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
                             </li>
                             <li class="group">
-                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+
+                            <li class="flex items-center pl-8 mt-3 lg:mt-0">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle"/>
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -53,23 +75,23 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
-     <section id="home" class="pt-36">
+     <section id="home" class="pt-36 dark:bg-dark">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-center justify-between w-full">
                 <!-- Left -->
                 <div class="w-full lg:w-1/2 self-center">
-                    <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl"> Hello Everyone👋, I am <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">EMILISA</span></h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl"> Game Programmer, <span class="text-dark">Unreal & Unity</span> Engine Specialist</h2>
+                    <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl"> Hello Everyone👋, I am <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">EMILISA</span></h1>
+                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl"> Game Programmer, <span class="text-dark dark:text-white">Unreal & Unity</span> Engine Specialist</h2>
                     <p class="font-medium text-secondary mb-10 leading-relaxed"> 
-                        Game Programmer specializing in <span class="text-dark"> Gameplay Systems, AI and Architecture </span>. Passionate about crafting interactive experiences using Unity, Unreal, and Evergine. </p>
+                        Game Programmer specializing in <span class="text-dark dark:text-white"> Gameplay Systems, AI and Architecture </span>. Passionate about crafting interactive experiences using Unity, Unreal, and Evergine. </p>
 
                     <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Contact Me</a>
                 </div>
                 <!-- Right -->
                 <div class="w-full lg:w-1/2 self-end lg:flex lg:justify-end">
                     <div class="relative mt-10 lg:mt-9">
-                        <img src="/dist/img/emilisa.png" alt="Emilisa" width="400" height="400" class="max-w-full mx-auto"/>
-                        <span class="absolute bottom-0 -z-20 left-1/2 -translate-x-1/2 md:scale-125">
+                        <img src="/dist/img/emilisa.png" alt="Emilisa" width="400" height="400" class="relative z-10 max-w-full mx-auto"/>
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
                             <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="oklch(54.6% 0.245 262.881)" d="M53.5,-19.8C59.4,0.7,47.3,24.6,27.8,38.9C8.4,53.2,-18.5,57.8,-39.8,44.8C-61,31.7,-76.6,0.9,-69.1,-22C-61.5,-44.9,-30.7,-59.8,-3.5,-58.7C23.8,-57.5,47.6,-40.4,53.5,-19.8Z" transform="translate(100 100) scale(1.2)" />
                             </svg>
@@ -82,19 +104,19 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-     <section id="about" class="pt-36 pb-32">
+     <section id="about" class="pt-36 pb-32 dark:bg-dark">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap lg:flex-nowrap items-start justify-between w-full gap-8">
                 <!-- Left -->
                 <div class="w-full lg:w-1/2 self-center mb-10">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md">"I believe good game architecture is invisible — it just works beautifully."</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md dark:text-white">"I believe good game architecture is invisible — it just works beautifully."</h2>
                     <p class="font-medium text-base text-secondary max-w-xl">
                         Dedicated and passionate Game Programmer with a Master’s degree in Digital Media and Game Technology from Institut Teknologi Bandung. Over 4 years of professional experience developing gameplay, AI, quests, and system architecture in Unity and Unreal Engine. Skilled in creating structured, scalable codebases and mentoring junior developers.</p>
                 </div>
                 <!-- Right -->
                  <div class="w-full lg:px-4 lg:w-1/2 justify-between relative">
-                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Let’s stay connected!</h3>
+                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Let’s stay connected!</h3>
                     <p class="font-medium text-base text-secondary mb-6">
                         You can find me on these platforms, where I share updates about my projects, game development insights, and behind-the-scenes moments from my creative journey. Feel free to reach out or just say hi — I’m always open to chatting about games, programming, or new ideas!</p>
                     <div class="flex items-center">
@@ -130,12 +152,12 @@
     <!-- About Section End -->
 
     <!-- Portofolio Section Start -->
-     <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+     <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container mx-auto">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Portolio</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4">Selected Project</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 dark:text-white">Selected Project</h2>
                     <p class="font-medium text-md text-secondary">
                         Here are some of the projects I’ve developed throughout my journey as a Game Programmer. Each project reflects my passion for crafting immersive gameplay systems, structured architecture, and engaging player experiences. I specialize in building games using Unreal Engine and Unity, focusing on gameplay programming, AI systems, quests, and tool development to empower designers and artists.
                     </p>
@@ -148,7 +170,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3944410/d678ed00745fc060841df4797f5a38c0fc397cac/ss_d678ed00745fc060841df4797f5a38c0fc397cac.1920x1080.jpg?t=1759728023" alt="Bank King Simulator" width="w-full"/>
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Bank King Simulator</h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Bank King Simulator</h3>
                     <p class="font-medium text-base text-secondary">
                         A humorous management simulator where players run a chaotic fantasy bank. Handle customers, manage gold, and survive magical audits!
                     </p>
@@ -164,7 +186,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3703750/e8765a00ec75d919cf82ecaf289d80cecc4a2d31/ss_e8765a00ec75d919cf82ecaf289d80cecc4a2d31.1920x1080.jpg?t=1759222405" alt="Ookami Okami" width="w-full"/>
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Ookami Okami</h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Ookami Okami</h3>
                     <p class="font-medium text-base text-secondary">
                         A 2D action-adventure game about a wolf spirit restoring balance to a cursed forest. Features melee combat, ability upgrades, and atmospheric storytelling.
                     </p>
@@ -180,7 +202,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3369020/5c3d96ffe53d746d44317b49850db434172668c6/ss_5c3d96ffe53d746d44317b49850db434172668c6.1920x1080.jpg?t=1753390550" alt="Death & Faeology" width="w-full"/>
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Death & Faeology</h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Death & Faeology</h3>
                     <p class="font-medium text-base text-secondary">
                         Mystery visual novel with item-based progression and magnifying glass investigation system.
                     </p>
@@ -196,7 +218,7 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376570/ss_feae757e7d6e152e8607e70df0b06dcaaaa8c7f3.1920x1080.jpg?t=1737085541" alt="Wonder Wandelier" width="w-full"/>
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Wonder Wandelier</h3>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Wonder Wandelier</h3>
                     <p class="font-medium text-base text-secondary">
                         A cozy magic wand-shop simulation RPG. Manage materials, craft wands, and build your shop reputation.
                     </p>
@@ -213,12 +235,12 @@
     <!-- Portofolio Section End -->
 
     <!-- Blog Section Start -->
-     <section id="blog" class="pt-36 pb-32 bg-slate-100">
+     <section id="blog" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
         <div class="container mx-auto">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4">Latest Blog</h2>
+                    <h2 class="font-bold text-white text-3xl mb-4 dark:text-dark">Latest Blog</h2>
                     <p class="font-medium text-md text-secondary">
                         My blog section is on the way! I’ll soon be sharing articles about game development, programming tips, and behind-the-scenes stories from my projects. Stay tuned — updates are coming soon!
                     </p>
@@ -227,7 +249,7 @@
 
             <div class="flex flex-wrap">
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-dark">
                         <img src="/dist/img/emilisa.png" alt="blog1" class="w-full"/>
                         <div class="py-8 px-6">
                             <h3>
@@ -238,24 +260,24 @@
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-dark">
                         <img src="/dist/img/emilisa.png" alt="blog1" class="w-full"/>
                         <div class="py-8 px-6">
                             <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Judul dua</a></h3>
+                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Judul dua</a></h3>
                             <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque tempora fuga ea atque animi reiciendis est, ipsa eius, porro voluptas, ullam at laborum veritatis ex quo suscipit deleniti dolor iure.</p>
                             <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-dark">
                         <img src="/dist/img/emilisa.png" alt="blog1" class="w-full"/>
                         <div class="py-8 px-6">
                             <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate">Judul tiga</a></h3>
+                                <a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Judul tiga</a></h3>
                             <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque tempora fuga ea atque animi reiciendis est, ipsa eius, porro voluptas, ullam at laborum veritatis ex quo suscipit deleniti dolor iure.</p>
-                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Read More</a>
+                            <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 dark:text-white">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -265,12 +287,12 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start -->
-     <section id="contact" class="pt-36 pb-32">
+     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
         <div class="container mx-auto">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4">Interested in collaborating or hiring me?</h2>
+                    <h2 class="font-bold text-dark text-3xl mb-4 dark:text-white">Interested in collaborating or hiring me?</h2>
                     <p class="font-medium text-md text-secondary">
                         I’m always open to new opportunities, collaborations, or freelance projects related to game development. Whether you’re looking for a gameplay programmer, system architect, or Unreal/Unity specialist — feel free to reach out! Let’s build something amazing together.
                     </p>

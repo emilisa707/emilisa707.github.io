@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     --color-primary:oklch(54.6% 0.245 262.881);
@@ -11,11 +12,11 @@ body {
 }
 
 .navbar-fixed {
-    @apply fixed z-[9999] bg-white/80 backdrop-blur-[5px] shadow
+    @apply fixed z-[9999] bg-white/80 backdrop-blur-[5px] shadow dark:bg-dark/80;
 }
 
 .hamburger-line {
-    @apply w-[30px] h-[2px] my-2 block bg-dark
+    @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -28,4 +29,8 @@ body {
 
 .hamburger-active > span:nth-child(3) {
     @apply origin-top-left -rotate-45
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-3;
 }
