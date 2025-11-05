@@ -2,7 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-primary:oklch(54.6% 0.245 262.881);
+    --color-primary:oklch(75% 0.183 55.934);
     --color-secondary:#64748b;
     --color-dark: #0f172a;
 }
