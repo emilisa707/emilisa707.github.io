@@ -855,11 +855,6 @@
       color: var(--color-dark);
     }
   }
-  .dark\:text-slate-500 {
-    &:where(.dark, .dark *) {
-      color: var(--color-slate-500);
-    }
-  }
   .dark\:text-white {
     &:where(.dark, .dark *) {
       color: var(--color-white);
